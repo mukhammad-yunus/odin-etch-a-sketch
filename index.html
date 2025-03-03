@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Etch-a-Sketch</title>
-</head>
-<body>
-  
-  <script type="module" src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body>
+    <div class="set-container">
+      <button onclick="">Set pixels</button>
+      <form class="set-cells"">
+        <label for="cell-amount">Grid Size:</label>
+        <input 
+          type="number" 
+          min="16" 
+          max="100" 
+          id="cell-amount" 
+          name="cell-amount" 
+          placeholder="Enter grid size (e.g. 16 for 16×16)" 
+          required 
+        >
+        <button type="submit"">Set Grid</button>
+      </form>
+      
+    </div>
+    <div class="container"></div>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>

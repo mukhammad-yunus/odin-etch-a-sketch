@@ -1,9 +1,8 @@
 * {
   margin: 0;
+  user-select: none;
 }
 .container {
-  height: 960px;
-  width: 960px;
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
@@ -18,4 +17,63 @@
   width: 100%;
   box-sizing: border-box;
   aspect-ratio: 1/1;
+}
+.set-container{
+  position: relative;
+}
+.set-cells{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  justify-content: center;
+  min-width: 250px;
+  min-height: 250px;
+  padding: 1rem;
+  gap: 1rem;
+  user-select: none;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.set-cells input{
+  background: transparent;
+  border: 1px solid #0e3069;
+  padding: .5rem;
+  border-radius: 2px;
+  color:inherit
+}
+.set-cells input:focus{
+  outline: none;
+}
+.set-cells input::placeholder{
+  color: rgb(219, 219, 219);
+}
+.close{
+  position: absolute;
+  top: .25rem;
+  right: .5rem;
+  cursor: pointer;
+  padding: 0 .25rem;
+  transition: background .2s;
+}
+.close:hover{
+  background: #d6d6d6;
+}
+
+/* hiding arrows in a input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

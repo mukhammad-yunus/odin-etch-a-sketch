@@ -8,23 +8,27 @@
   </head>
   <body>
     <div class="set-container">
-      <button onclick="">Set pixels</button>
-      <form class="set-cells"">
-        <label for="cell-amount">Grid Size:</label>
-        <input 
-          type="number" 
-          min="16" 
-          max="100" 
-          id="cell-amount" 
-          name="cell-amount" 
-          placeholder="Enter grid size (e.g. 16 for 16×16)" 
-          required 
-        >
-        <button type="submit"">Set Grid</button>
+      <div class="panel-container">
+        <p id="grid-info"></p>
+        <input type="color" id="pix-color" name="pix-color" value="#000000" />
+        <button onclick="handleClose('flex')">Change grid</button>
+
+      </div>
+      <form class="set-cells" style="display: none">
+        <input
+          type="number"
+          min="16"
+          max="100"
+          id="cell-amount"
+          name="cell-amount"
+          placeholder="Enter grid size (e.g. 16 for 16×16)"
+          required
+        />
+        <button type="submit">Set Grid</button>
+        <p class="close" onclick="handleClose()">x</p>
       </form>
-      
     </div>
     <div class="container"></div>
-    <script type="module" src="index.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
